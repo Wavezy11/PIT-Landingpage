@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/Tecna.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'CustomFont', sans-serif;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* Lichtere achtergrond voor een frisse uitstraling */
+}
+
+header {
+    height: 16vh;
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* Verfijnde lijnkleur */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #ffffff;
+    z-index: 1000;
+    position: fixed; /* Houd header vast */
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+}
+
+header img {
+    height: auto; /* Houd de aspect ratio */
+    max-height: 80%; /* Beperk de hoogte voor consistentie */
+}
+
+main { 
+   
+    padding: 20px;
+    padding-top: 20vh; /* Ruimte voor de vaste header */
+    min-height: calc(100vh - 16vh); /* Houd hoofdinhoud boven de footer */
+}
+
+h1 {
+    font-size: 2.5rem; /* Grotere titel */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #242424; /* Accentkleur */
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* Beperk de breedte voor betere leesbaarheid */
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rondere hoeken */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea,
+form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Vervagingseffect voor focus */
+}
+
+form input[type="text"]:focus,
+form input[type="url"]:focus,
+form textarea:focus {
+    border-color: #007bff; /* Blauw bij focus */
+    outline: none; /* Verwijder standaard rand */
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibele kolommen */
+    gap: 20px;
+}
+
+.app {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Zachte schaduw */
+    transition: transform 0.2s ease; /* Animatie voor hover effect */
+}
+
+.app:hover {
+    transform: translateY(-5px); /* Lichte verhoging bij hover */
+}
+
+.app img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.app p {
+    margin: 10px 0;
+}
+
+.app .apptitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#popup {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+/* Media queries voor responsiviteit */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Kleinere titel voor kleinere schermen */
+    }
+
+    form {
+        width: 90%; /* Breder voor mobiele apparaten */
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Eén kolom voor mobiele apparaten */
+    }
+}

@@ -1,447 +1,707 @@
 
-@font-face {
-    font-family: 'CustomFont';
-    src: url('fonts/Tecna.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    @font-face {
+        font-family: 'Tecna';
+        src: url('../fonts/Tecna.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
 
 
-}
+    }
+
+    @font-face {
+        font-family: 'extraBold';
+        src: url('../fonts/TecnaExtrabold.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
 
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'CustomFont', sans-serif;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
+    }
 
-header {
-    height: 16vh;
-    width: 100%;
-    border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background-color: white;
-    z-index: 1000; 
-    position: fixed; /* Maak de header vast */
-    top: 0; /* Zorg dat het aan de bovenkant blijft */
-}
+    @font-face {
+        font-family: 'lightFont';
+        src: url('../fonts/TecnaLight.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
 
 
-header img {
-    height: 51%;
-    width: auto;
-    position: relative;
-    top: -5px;
-    left: -5px;
-}
+    }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
 
-nav ul li {
-    margin: 0 15px;
-}
+    @font-face {
+        font-family: 'boldFont';
+        src: url('../fonts/TecnaBold.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
 
-nav ul li a:hover {
-    border-bottom: 2px solid black;
-    padding-bottom: 5px;
-    box-shadow: 0px 27px 6px 0px rgba(0,0,0,0.45);
-}
 
-main {
+    }
+
+    @font-face {
+        font-family: 'Demibold';
+        src: url('../fonts/TecnaDemibold.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
+
+
+    }
+
+    @font-face {
+        font-family: 'black';
+        src: url('../fonts/TecnaBlack.otf') format('opentype'); 
+        font-weight: normal;
+        font-style: normal;
+
+
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Tecna', sans-serif;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    header {
+        width: 100%;
+        height: 14vh; /* Adjust the height according to your design */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background-color: white; /* Background color of the header */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border-bottom for a clean look */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); /* Optional soft shadow for depth */
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        font-family: 'boldFont', sans-serif;
+    }
+
+    header img {
+        height: 57%;
+        width: auto;
+        position: relative;
+        top: 1px;
+        left: -4px;
+    }
+
+    .logofooter {
+        height: 57%;
+        width: 10vw;
+        position: relative;
+        right: 1.5vw;
+    }
+
+    #beforeDIV {
+        height: 95vh;
+        width: 50%;
+        position: relative;
+        background-color: blueviolet;
+    }
+    #imgdiv {
+        height: 95vh;
+        width: 50%;
+        
+        left: 50%;
+        position: relative;
+        background-color: rgb(141, 124, 156);
+    }
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a:hover {
     
-    width: 100%;
-    position: relative;
-    background-color: #DAF2FE;
-    padding-bottom: 50px;
-}
+        padding-bottom: 5px;
+        box-shadow: 0px 27px 6px 0px rgba(0,0,0,0.45);
+    }
 
-.titel {
-    margin-top: 15vh;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #242424; /* Accentkleur */
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2px;
+    main {
+        
+        width: 100%;
     
-}
+        position: relative;
+        background-color: #e3eff7;
+        padding-bottom: 50px;
+        
+    }
 
-.tekst {
-    margin: 50px auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4A4A4A;
-    text-align: center;
-    max-width: 80%;
-    padding: 25px 40px;
-}
 
-.tekst p {
-    margin-bottom: 1.5em;
-}
-.container {
-    margin-top: 13vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8vh; 
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    #yy {
 
-.app {
-    overflow: hidden;
-    height: 425px;
-    background-color: #DAF2FE;
+        background-color: white;
 
-    border-radius: 2px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer; 
-    width: 375px;
-    right: 20px;
-    position: relative;
-}
 
-.app:hover {
-    background-color: white; 
-    transform: scale(1.01); 
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
-    color: #FD6555;
-    transition: 0.7s;
-}
-
-/* Hover animation: background transitions to white, text changes to red */
-.app::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: white;
-    transition: width 0.7s ease;
-    z-index: 0;
-}
-
-.app:hover::before {
-    width: 100%;
-}
-
-.app:hover {
-    color: red;
-}
-
-.app p, .app .apptitle {
-    position: relative;
-    z-index: 1;
-    
-}
-.apptitle {
- 
-    
-}
-.homepage-image {
-    height: 325px;
-    width: 325px;
-    top: 3px;
-    position: relative;
-}
-
-.app-date {
-    position: relative;
-    top: 15px;
-    right: 25%;
-    font-size: 1.0rem;
-}
-
-.apptitle {
-    font-weight: bold;
-    width: 500px;
-    font-size: 1.3rem;
-    position: relative;
-    top: 0;
-    
-    right: 25%;
-   
-}
-
-.beschrijving {
-    font-size: 1rem;
-    margin-top: 15px;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    left: 20%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 900px;
-    background-color: #d1e0e0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    padding: 30px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.popup-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.popup-left {
-    flex: 1;
-    max-width: 45%;
-    margin-right: 30px;
-}
-
-.popup-right {
-    flex: 2;
-    max-width: 55%;
-}
-
-.popup img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    max-height: 475px;
-    max-width: 425px;
-    border-radius: 0;
-}
-
-#popupTitle {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-#popupDescription {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-height: 14rem;
-    overflow: hidden;
-}
-
-#popupbutton {
-    display: block;
-    padding: 15px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    max-width: 250px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: red;
-    transition: color 0.3s ease;
-}
-
-.close:hover {
-    color: #000;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Media queries */
-@media screen and (max-width: 768px) {
+    }
     .titel {
-        font-size: 1.5rem;
+        margin-top: 15vh;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #242424; /* Accentkleur */
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        
     }
 
     .tekst {
-        font-size: 0.9rem;
+        margin: 50px auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #4A4A4A;
+        text-align: center;
+        max-width: 80%;
+        padding: 25px 40px;
     }
 
+    .tekst p {
+        margin-bottom: 1.5em;
+    }
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-        gap: 4vh;
+        margin-top: 30vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8vh; 
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .app {
+        overflow: hidden;
+        height: 425px;
+        border-radius: 2px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: background-color 0.7s ease, transform 0.7s ease;
+        cursor: pointer;
+        width: 375px;
+        position: relative;
+    }
+    .app img {
+
+        position: relative;
+        z-index: 2; 
     }
 
-    .app {
-        height: 180px;
-        padding: 15px;
+    /* Hover animation: background transitions to white, text changes to red */
+    .app:hover {
+        background-color: white;
+        transform: translateY(-5px) scale(1.01); /* Moves the element slightly upward and adds a subtle scale */
+        color: orangered;
+        transition: 0.575s;
+    }
+
+    .app::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: white;
+        transition: width 0.7s ease;
+        z-index: 0;
+    }
+
+    .app:hover::before {
+        width: 100%;
+    }
+
+    .app p, .app .apptitle {
+        position: relative;
+        z-index: 1;
+        
+    }
+
+    .homepage-image {
+        height: 325px;
+        width: 325px;
+        object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult met behoud van aspect ratio */
+        object-position: center; /* Centreert de afbeelding binnen de container */
+        display: block;
+    }
+
+
+    .app-date {
+        position: relative;
+        top: 15px;
+        right: 27%;
+        font-size: 0.85rem;
     }
 
     .apptitle {
-        font-size: 1rem;
+        font-weight: bold;
+        width: 500px;
+        font-size: 1.4rem;
+        position: relative;
+        top: 0;
+        color: black;
+        right: 13%;
+    
     }
 
     .beschrijving {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        margin-top: 15px;
     }
 
     .popup {
+        display: none;
         position: fixed;
-        width: 20%;
-        left: 10%;
+        left: 20%;
         top: 20%;
         transform: translate(-50%, -50%);
+        width: 70%;
+        max-width: 900px;
+        background-color: #c4e9e9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        padding: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .popup-content {
-        flex-direction: column;
-    }
-
-    .popup-left,
-    .popup-right {
-        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     .popup-left {
-        margin-right: 0;
-        margin-bottom: 20px;
+        flex: 1;
+        max-width: 45%;
+        margin-right: 30px;
     }
 
-    #popupTitle {
-        font-size: 1.5rem;
+    .popup-right {
+        flex: 2;
+        max-width: 55%;
     }
 
-    #popupDescription {
-        max-height: none;
-    }
-
-    #popupbutton {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .titel {
-        font-size: 1.2rem;
-    }
-
-    .tekst {
-        font-size: 0.8rem;
-    }
-
-    .container {
-        grid-template-columns: 1fr; 
-    }
-
-    .app {
-        height: 150px;
-        padding: 10px;
-    }
-
-    .apptitle {
-        font-size: 0.9rem;
-    }
-
-    .beschrijving {
-        font-size: 0.8rem;
-    }
-
-    .popup {
+    .popup img {
         width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         height: auto;
-    }
+        border-radius: 8px;
+        object-fit: cover; /* Zorgt ervoor dat de afbeelding de container vult met behoud van aspect ratio */
 
-    #popupImage {
-        max-height: 30vh;
+        display: block;
+        max-height: 475px;
+        max-width: 425px;
+        border-radius: 0;
     }
 
     #popupTitle {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-family: 'boldFont', sans-serif;
     }
 
     #popupDescription {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-height: 14rem;
+        overflow: hidden;
+        font-family: 'Tecna', sans-serif;
     }
+
+    .studenten {
+        width: 10vw;
+        height: 5vh;
+
+        position: absolute;
+        right: 22vw;
+        top: 0;
+        line-height: 2;
+        font-size: 15px;
+    
+    }
+    .studenten2 {
+        top: 0;
+        width: 12vw;
+        height: 5vh;
+        font-size: 15px;
+        position: absolute;
+        right: 10vw;
+        line-height: 2;
+    }
+    .studenten3 {
+        top: 0;
+        width: 10vw;
+        line-height: 2.125;
+        height: 5vh;
+    
+        position: absolute;
+        right: 1vw;
+        font-size: 15px;
+    }
+
+    .subtextA {
+        position: absolute;
+        top: 35vh;
+        left: 0;
+        width: 36vw;
+        font-size: 12px;
+        font-family: 'lightFont', sans-serif;
+    }
+    .texts {
+        width: 50%;
+        height: 100%;
+
+    }
+    #subtitel {
+        top: 40vh;
+    
+    }
+
+    .textss {
+        position: absolute;
+        top: 42vh;
+        left: 0;
+        width: 36vw;
+        font-size: large;
+    
+    }
+    .subtitel {
+        position: absolute;
+        left: 1vw;
+        top: -10vh;
+        font-family: 'extraBold', sans-serif;
+        font-size: 45px;
+
+    }
+    .subtext {
+        position: absolute;
+        left: 1vw;
+        top: 10vh;
+        font-family: 'lightFont', sans-serif;
+        font-size: 17px;
+        width: 45vw;
+    }
+
+    #vrimg {
+        position: absolute;
+        right: 0vw;
+        height: 106vh;
+        top: 12vh;
+        transform: scale(1.03);
+
+        width: 50%;
+        /* object-fit: cover; Zorgt ervoor dat de afbeelding de container vult met behoud van aspect ratio */
+        /* Centreert de afbeelding binnen de container */
+        display: block;
+    }
+    #vrimg img {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        height: 100%;
+    }
+    #hero {
+        height: 100vh;
+        width: 100%;
+    
+    }
+
 
     #popupbutton {
-        font-size: 0.8rem;
+        display: block;
+        padding: 15px;
+        background-color: #847dff;
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        max-width: 250px;
     }
-}
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: red;
+        transition: color 0.3s ease;
+    }
+
+    .close:hover {
+        color: #000;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 768px) {
+        .titel {
+            font-size: 1.5rem;
+        }
+
+        .tekst {
+            font-size: 0.9rem;
+        }
+
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 4vh;
+        }
+
+        .app {
+            height: 180px;
+            padding: 15px;
+        }
+
+        .apptitle {
+            font-size: 1rem;
+        }
+
+        .beschrijving {
+            font-size: 0.9rem;
+        }
+
+        .popup {
+            position: fixed;
+            width: 20%;
+            left: 10%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+        }
+
+        .popup-content {
+            flex-direction: column;
+        }
+
+        .popup-left,
+        .popup-right {
+            max-width: 100%;
+        }
+
+        .popup-left {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        #popupTitle {
+            font-size: 1.5rem;
+        }
+
+        #popupDescription {
+            max-height: none;
+        }
+
+        #popupbutton {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .titel {
+            font-size: 1.2rem;
+        }
+
+        .tekst {
+            font-size: 0.8rem;
+        }
+
+        .container {
+            grid-template-columns: 1fr; 
+        }
+
+        .app {
+            height: 150px;
+            padding: 10px;
+        }
+
+        .apptitle {
+            font-size: 0.9rem;
+        }
+
+        .beschrijving {
+            font-size: 0.8rem;
+        }
+
+        .popup {
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+        }
+
+        #popupImage {
+            max-height: 30vh;
+        }
+
+        #popupTitle {
+            font-size: 1.2rem;
+        }
+
+        #popupDescription {
+            font-size: 0.8rem;
+        }
+
+        #popupbutton {
+            font-size: 0.8rem;
+        }
+    }
+
+    footer {
+        background-color: #000; /* Matches the background in the image */
+        color: white;
+        padding: 80px 20px; /* Adjust padding as needed */
+        text-align: left;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between; /* Verdeel de ruimte gelijkmatig */
+        flex-wrap: wrap; /* Zorgt ervoor dat de secties mooi blijven wanneer het scherm kleiner is */
+    }
 
 
-footer {
-    background-color: white; /* Use your theme color */
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+    .footer-section {
+        flex: 1; /* Zorgt ervoor dat ze gelijk verdeeld worden */
+        margin: 0 30px;
+        min-width: 200px;
+    
+    }
+    .footer-section h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
 
-.page-number {
-    text-align: right;
-    padding: 10px;
-    font-size: 14px;
-    color: #333; /* Adjust color as needed */
-}
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 20px;
+    }
 
-.pagination {
-    text-align: center;
-    margin: 20px 0;
-}
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
 
-.pagination a {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 0 5px;
+    .footer-section ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-section ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-contact {
+        text-align: right;
+    }
+
+    .footer-contact a {
+        color: white;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .footer-contact a:hover {
+        text-decoration: underline;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    footer p {
+        margin-top: 30px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .page-number {
+        text-align: right;
+        padding: 10px;
+        font-size: 14px;
+        color: #333; /* Adjust color as needed */
+    }
+
+    .pagination {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .pagination a {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 0 5px;
+        text-decoration: none;
+        background-color: #f2f2f2;
+        color: #333;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    .pagination a.active {
+        background-color: #847dff;
+        color: white;
+        
+    }
+
+    .pagination a:hover {
+        background-color: #ddd;
+        transition: 0.575s;
+        color: black;
+    }
+
+
+    a { color: inherit;
     text-decoration: none;
-    background-color: #f2f2f2;
-    color: #333;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
+    } 
 
-.pagination a.active {
-    background-color: #007BFF;
-    color: white;
-    border: 1px solid #007BFF;
-}
+    .mailons, .belons {
+        height: 8vh;
+        width: 11vw;
+        font-size: 20px;
+        text-align: center;
+        line-height: 3.5;
+        color: black;
+        
+    }
 
-.pagination a:hover {
-    background-color: #ddd;
-}
-
-
-a { color: inherit;
-text-decoration: none;
-} 
+    .mailons {
+        background-color: wheat;
+        text-decoration: none;
+        position: relative;
+        top: -10vh;
+        right: 15vw;
+        
+    }
+    .belons {
+    
+        color: black;
+    }

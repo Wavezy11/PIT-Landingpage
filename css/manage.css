@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('fonts/Tecna.otf') format('truetype');
+    src: url('/fonts/Tecna.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -24,9 +24,9 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     background-color: #ffffff;
-    z-index: 1000;
     position: fixed; /* Houd header vast */
     top: 0;
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
 }
 
@@ -36,7 +36,6 @@ header img {
 }
 
 main { 
-   
     padding: 20px;
     padding-top: 20vh; /* Ruimte voor de vaste header */
     min-height: calc(100vh - 16vh); /* Houd hoofdinhoud boven de footer */
@@ -45,12 +44,11 @@ main {
 h1 {
     font-size: 2.5rem; /* Grotere titel */
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0; /* Consistente marges */
     color: #242424; /* Accentkleur */
 }
 
 form {
-    width: 100%;
     max-width: 600px; /* Beperk de breedte voor betere leesbaarheid */
     margin: 20px auto;
     background-color: #ffffff;
@@ -146,6 +144,23 @@ form button:hover {
     display: none;
 }
 
+
+#hoofdpagina {
+    height: 50px;
+    width: 125px;
+    position: absolute;
+    left: 85%;
+    top: 5vh;
+   
+}
+#hoofdpaginaa {
+    height: 50px;
+    width: 125px;
+    position: absolute;
+    left: 75%;
+    top: 5vh;
+   
+}
 /* Media queries voor responsiviteit */
 @media (max-width: 768px) {
     h1 {
@@ -160,3 +175,5 @@ form button:hover {
         grid-template-columns: 1fr; /* Eén kolom voor mobiele apparaten */
     }
 }
+
+

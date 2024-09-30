@@ -68,8 +68,9 @@ if (isset($_POST['update'])) {
 </head>
 <body>
     <header>
-        <img src="../img/logo-yonder.png" alt="logo">
-        <a href="../index.php"> <button> Keer terug naar het hoofdpagina</button> </a>
+        <img src="../img/yonder.png" alt="logo">
+        <a href="../index.php"> <button id="hoofdpagina"> Keer terug naar het hoofdpagina</button> </a>
+        <a href="upload.php"><button id="hoofdpaginaa">uploaden?</button></a>
     </header>
 
     <main>
@@ -109,7 +110,7 @@ if (isset($_POST['update'])) {
             }
             ?>
 
-            <a href="upload.php"><button>uploaden?</button></a>
+         
         </div>
     </main>
 </body>

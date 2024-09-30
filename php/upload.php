@@ -50,49 +50,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload App - PIT</title>
     <link rel="stylesheet" href="../css/upload.css">
-    
 </head>
 <body>
     <header>
-        <img src="../img/logo-yonder.png" alt="logo">
+        <img src="../img/yonder.png" alt="logo">
         <a href="../index.php"> <button> Keer terug naar het hoofdpagina</button> </a>
     </header>
-
     <main>
         <h1>Upload een nieuwe app</h1>
         <form method="POST" enctype="multipart/form-data">
             <label for="title">Titel:</label>
             <input type="text" name="title" id="title" required>
-
             <label for="description">Beschrijving:</label>
             <textarea name="description" id="description" required></textarea>
-
             <div>
                 <span id="charCount">0</span>/400 karakters
-            </div>
-            
-
+            </div> <br>
             <label for="image">Afbeelding:</label>
             <input type="file" name="image" id="image" accept="image/*" required>
-
             <label for="link">Link naar de applicatie:</label>
-<input type="url" name="link" id="link" required>
-
+            <input type="url" name="link" id="link" required>
             <button type="submit">Upload</button>
         </form>
 
-      
-
-        <script src="../js/upload.js"></script>
     </main>
+    <script src="../js/upload.js"></script>
 </body>
 </html>

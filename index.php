@@ -1,6 +1,8 @@
 <?php
 // index.php
 
+
+
 // Databaseverbinding
 $host = 'localhost';
 $db = 'pit landing-page'; // Vervang dit door je database naam
@@ -17,7 +19,6 @@ try {
 
 
 $appsPerPage = 12;
-
 
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $start = ($page > 1) ? ($page * $appsPerPage) - $appsPerPage : 0;
@@ -47,26 +48,38 @@ $apps = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
 <header>
-    <img src="img/logo-yonder.png" alt="logo">
-    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-        <a href="php/upload.php"> <button>Edit</button> </a>
-    <?php endif; ?>
+    
+    <img src="img/Yonder.png" alt="logo">
+    
+        
+
+
 </header>
 
+   
     <main>
+
+        <section id="hero"> 
+        <section class="texts"> <div class="textss"> 
+
+     
+   
+ <br> <h1> <p class="subtitel">Onze projecten</p> </h1>
+<br>
+<p class="subtext">
+Wij ontwikkelen innovatieve onderwijsprojecten waarin interactieve technologie een centrale rol speelt. <br> Deze projecten richten zich op het integreren van moderne technologieën in het onderwijs, waardoor leraren en studenten nieuwe manieren ontdekken om te leren en samen te werken. <br> In samenwerking met Yonder en de Kopgroep Interactieve Technologie werkt PIT aan toekomstbestendig onderwijs dat inspeelt op de veranderingen in het digitale landschap. <br> Het doel is om technologie op een effectieve manier te gebruiken om leerervaringen te verbeteren en onderwijs te vernieuwen.</p>
+</div> 
+<div id="vrimg">
+    <img src="img\vr-girl.png" alt="foto van een meid">
+    </div>
+</section>
+    </section>
         <br><br>
-        <p class="titel">Onze projecten</p>
-        <p class="tekst">
-            Welkom bij het Practoraat Interactieve Technologie. Wij presenteren met trots onze vooruitstrevende digitale oplossingen en innovatieve apps. 
-            Hier vindt u een overzicht van de projecten die we hebben ontwikkeld, variërend van gebruiksvriendelijke mobiele applicaties tot krachtige webtools.
-            <br><br>
-            Elk van onze creaties is zorgvuldig ontworpen met oog voor kwaliteit, intuïtief gebruiksgemak en afgestemd op de specifieke wensen van onze partners. 
-            <br><br>
-            Ontdek hoe onze oplossingen bedrijven en organisaties ondersteunen bij efficiënter werken, effectievere communicatie en versnelde innovatie. 
-            <br> 
-            Of u nu inspiratie zoekt of geïnteresseerd bent in samenwerking, wij staan klaar om uw organisatie te helpen bij de volgende stap in digitale vooruitgang.
-        </p>
+        </main>
+<section id="container">
+   
         <div class="container">
             <?php foreach ($apps as $row): ?>
                 <div class="app" data-title="<?= htmlspecialchars($row['title']) ?>" data-description="<?= htmlspecialchars($row['description']) ?>" data-image="img/<?= htmlspecialchars($row['image']) ?>" data-link="<?= htmlspecialchars($row['link']) ?>">
@@ -101,13 +114,68 @@ $apps = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
 
-        
+        </section>
 
         <script src="js/index.js"></script>
-    </main>
-
+   
     <footer>
-        <a href="php/login.php">
-        <p>&copy; <?= date('Y') ?> Yonder. Alle rechten voorbehouden.</p>
+    <div class="footer-container">
+
+                <!-- <img src="img\Yonder-Full-White.png" alt="logo" class="logofooter"> -->
+        <div class="footer-section">
+            <h3>Voor studenten</h3>
+            <ul>
+                <li><a href="#">Opleidingen</a></li>
+                <li><a href="#">Studie kiezen</a></li>
+                <li><a href="#">Op school</a></li>
+                <li><a href="#">Over Yonder</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Voor volwassenen</h3>
+            <ul>
+                <li><a href="#">Vakgebieden</a></li>
+                <li><a href="#">Opleidingen</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Voor bedrijven</h3>
+            <ul>
+                <li><a href="#">Vakgebieden</a></li>
+                <li><a href="#">Opleidingen</a></li>
+                <li><a href="#">Kennisbank</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Over Yonder</h3>
+            <ul>
+                <li><a href="#">Werken bij</a></li>
+                <li><a href="#">Onze locaties</a></li>
+                <li><a href="#">Bestuur en directie</a></li>
+                <li><a href="#">Pers</a></li>
+                <li><a href="#">Privacy statement</a></li>
+                <li><a href="#">Meldpunt</a></li>
+                <li><a href="#">Practoraat</a></li>
+                <li><a href="#">Reglementen</a></li>
+                <li><a href="#">Jaarverslag</a></li>
+                <li><a href="#">Onze bouwprojecten</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <!-- <div class="belons"> <a href="#">Bel ons</a></div>
+            <div class="mailons">   <a href="#">Mail ons</a> </div>
+          -->
+            <!-- <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="img/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#"><img src="img/youtube-icon.png" alt="YouTube"></a>
+            </div> -->
+        </div>
+    </div> 
+    <a href="php/login.php">
+    <p>2024 Yonder. Alle rechten voorbehouden.</p>
             </a>
-    </footer>
+</footer>

@@ -23,6 +23,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+   
+    width: 100%;
+    position: relative;
+    left: 0;
 }
 
 header img {
@@ -51,7 +55,7 @@ h1 {
 }
 
 form {
-    
+    color: black;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -62,7 +66,7 @@ form {
 form label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: black;
 }
 
 form input[type="text"],
@@ -73,9 +77,18 @@ form input[type="file"] {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: black;
     transition: border-color 0.3s;
 }
-
+#link {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    transition: border-color 0.3s;
+}
 form input[type="text"]:focus,
 form textarea:focus,
 form input[type="file"]:focus {
@@ -180,7 +193,7 @@ form textarea {
 #charCount {
     height: 200px;
     width: 200px;
-    background-color: lightgrey;
+  
     color: black;
 }
 
@@ -189,8 +202,9 @@ form textarea {
     width: 300px;
     color: black;
     font-size: 1.2em;
-    color: #333;
+   
     position: absolute;
     top: 80%;
     left: 45%;
 }
+

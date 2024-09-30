@@ -57,3 +57,4 @@ document.querySelectorAll('.app').forEach(function(app) {
         togglePopup(title, description, image, link);
     });
 });
+

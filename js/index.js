@@ -44,6 +44,8 @@ function togglePopup(title = "", description = "", image = "", link = "") {
     }
 }
 
+
+
 // Voeg click-event toe aan alle apps op de pagina
 document.querySelectorAll('.app').forEach(function(app) {
     app.addEventListener('click', function(event) {

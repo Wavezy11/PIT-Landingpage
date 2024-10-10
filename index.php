@@ -72,7 +72,7 @@ $apps = $stmt->fetchAll(PDO::FETCH_ASSOC);
 Wij ontwikkelen innovatieve onderwijsprojecten waarin interactieve technologie een centrale rol speelt. <br> Deze projecten richten zich op het integreren van moderne technologieën in het onderwijs, waardoor leraren en studenten nieuwe manieren ontdekken om te leren en samen te werken. <br> In samenwerking met Yonder en de Kopgroep Interactieve Technologie werkt PIT aan toekomstbestendig onderwijs dat inspeelt op de veranderingen in het digitale landschap. <br> Het doel is om technologie op een effectieve manier te gebruiken om leerervaringen te verbeteren en onderwijs te vernieuwen.</p>
 </div> 
 <div id="vrimg">
-    <img src="img\vr-girl.png" alt="foto van een meid">
+    <img src="img\vr-girl.png" alt="foto van een meid" class="vrimg">
     </div>
 </section>
     </section>
